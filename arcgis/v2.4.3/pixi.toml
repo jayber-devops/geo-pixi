@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Jay Roebuck <jroebuck@esri.com>"]
+channels = ["conda-forge"]
+name = "arcgis"
+platforms = ["win-64", "linux-64", "osx-arm64"]
+version = "2.4.3"
+
+[dependencies]
+python = "3.13.*" # align with version used in ArcGIS Pro
+gdal = "3.12.2.*" # use version on Esri channel at the time of the release
+
+[pypi-dependencies]
+arcgis = "==2.4.3.*"
+arcgis-mapping = "==5.0.0.*"
