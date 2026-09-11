@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Jay Roebuck <jroebuck@esri.com>"]
+channels = ["conda-forge"]
+name = "arcgis"
+platforms = ["win-64", "linux-64", "osx-arm64"]
+version = "2.4.4-prerelease" # this is prerelease software and is subject to change
+
+[dependencies]
+python = "3.13.*" # align with version used in ArcGIS Pro
+gdal = "3.12.2.*" # use version on Esri channel at the time of the release
+
+[pypi-dependencies]
+arcgis = {url = "https://esri-forge.python.geocloud.com/pypi/arcgis-2.4.4-py3-none-any.whl"}
+arcgis-mapping = {url = "https://esri-forge.python.geocloud.com/pypi/arcgis_mapping-5.1.0-py3-none-any.whl"}
