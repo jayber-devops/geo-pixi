@@ -12,3 +12,15 @@ gdal = "3.12.2.*" # use version on Esri channel at the time of the release
 [pypi-dependencies]
 arcgis = {url = "https://esri-forge.python.geocloud.com/pypi/arcgis-2.4.4-py3-none-any.whl"}
 arcgis-mapping = {url = "https://esri-forge.python.geocloud.com/pypi/arcgis_mapping-5.1.0-py3-none-any.whl"}
+
+[feature.anaconda]
+channels = ["esri/label/prerelease", "esri", "main"]
+channel-priority = "disabled"
+
+[feature.anaconda.dependencies]
+python = "3.13.*"
+arcgis = "2.4.4.*"
+arcgis-mapping = "5.1.0.*"
+
+[environments]
+anaconda = {features = ["anaconda"], no-default-feature = true}
